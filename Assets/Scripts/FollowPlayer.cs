@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
@@ -12,7 +11,7 @@ public class FollowPlayer : MonoBehaviour
     }
 
 
-    void Update()
+    void LateUpdate()
     {
         transform.position = Player.transform.position + offset;    
     }
