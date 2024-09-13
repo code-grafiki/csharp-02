@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float Speed = 20.0f;
+    public float speed = 20.0f;
+    public float turnSpeed = 0.0f;
 
     void Start()
     {
@@ -13,7 +14,8 @@ public class PlayerController : MonoBehaviour
 
    void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed);
 
     }
 }
